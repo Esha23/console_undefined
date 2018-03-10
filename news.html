@@ -1,0 +1,265 @@
+<html>
+<head>
+	<style>
+      body {
+        padding-top: 54px;
+      }
+      @media (min-width: 992px) {
+        body {
+          padding-top: 56px;
+          background-image:url(back.jpg);
+          font-size: 17px;
+
+        }
+      }
+      header {
+  padding: 154px 0 100px;
+}
+
+@media (min-width: 992px) {
+  header {
+    padding: 156px 0 100px;
+  }
+}
+
+section {
+  padding: 150px 0;
+}
+.front{
+         padding-top: 25px;
+         background-color: #212529;
+         text-decoration-color: blue;
+      }
+/*      #participants{
+        padding-top: 110px;
+      }
+      #mentors{
+        padding-top: 40px;
+      }*/
+      html{
+  overflow-x: hidden;
+}
+.thumbnail{
+	margin-left: 85px;
+}
+
+.card {
+    width: 200px;
+    height:225px;
+    background: #f8f9fa;
+    position: relative;
+    margin: 10px;
+    padding:5px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    
+  }
+
+  .card .front {
+    position: absolute;
+    width: 95%;
+    height: 85%;
+    
+    backface-visibility: hidden;
+    transform: perspective(600px) rotateY(0deg);
+    transition: transform 0.55s linear;
+    border-radius:3px;
+  }
+
+  .card-underline{
+    background-color:#ff6a00;
+    margin:5px auto 10px auto;
+  }
+
+  .card .back {
+    position: absolute;
+    width: 85%;
+    height: 87%;
+    background: #333;
+    backface-visibility: hidden;
+    transform: perspective(600px) rotateY(180deg);
+    transition: transform 0.55s linear;
+    padding: 10px;
+    border-radius:4px;
+  }
+
+  .flipped .front{
+   transform: perspective(600px) rotateY(-180deg);
+  }
+    
+   .flipped .back{
+   transform: perspective(600px) rotateY(0deg);
+  }
+  header{
+    height:auto;
+    width:100%;
+    background-color:#222;
+    padding:100px 0px 20px 0;
+    position: relative;
+  }
+
+header .card-underline{
+  width:35%;
+  margin:0 auto;
+  background-color:white;
+  padding:0;
+
+}
+.front{
+	background-color: black;
+	/*background-repeat: no-repeat;*/
+	/*background:cover;*/
+	}
+.card .back{
+	background-image:url(front.jpg);
+    background:cover;
+ }
+
+
+    </style>
+
+</head>
+<body>
+
+<!-- 
+<p id="demo" >
+                 Lorem ipsum dolor sit amet, consectetuer adipiscing 
+                 <strong>strong</strong>. Cum sociis natoque penatibus 
+                 mus. Donec quam felis, ultricies nec, pellentesque 
+              </p> -->
+              <div class="col-lg-2.5">
+			      <div class="thumbnail" id="demoContainer">
+			      </div>
+			      <!-- <div class="card" id="demoContainer" onclick="this.classList.toggle('flipped')" > -->
+			            
+            </div>
+      </div>
+    </div>
+    </div>
+
+
+
+
+<!-- 
+<div >
+<button type="button" onclick="loadDoc()">Change Content</button>
+</div>
+ -->
+ <script>
+// loadDoc()
+// function loadDoc() {
+//   var xhttp = new XMLHttpRequest();
+//   xhttp.onreadystatechange = function() {
+//     if (this.readyState == 4 && this.status == 200) {
+//       myObj = JSON.parse(this.responseText);
+//       console.log(myObj);
+     //  Object.keys( json.totalItems ).forEach(function ( key ) {
+     //  	console.log(key);
+	    // json.totalItems[ key ].forEach(function ( obj ) {
+	    //     //document.write( obj.name );
+	    //     console.log(obj);
+	    // });
+
+	 /*   var doc = new 
+	   for(i=0;i<20;i++)
+	   {
+
+      document.getElementById("demo").innerHTML = myObj['items'][i]['city']+" "+myObj['items'][i]['country']+" "+myObj['items'][i]['id']+" "+myObj['items'][i]['end_year']+" "+myObj['items'][i]['frequency'];
+      // console.log(this.getAllResponseHeaders()); 
+      console.log(this.responseText);     
+     }}
+    }
+  xhttp.open("GET", "https://chroniclingamerica.loc.gov/search/pages/results/?andtext=thomas&format=json", true);
+  xhttp.send();
+  };
+*/
+
+
+
+
+
+// $.getJSON( "https://chroniclingamerica.loc.gov/search/pages/results/?andtext=thomas&format=json", function( data ) {
+//   var items = [];
+//   $.each( data, function( key, val ) {
+//     items.push( "<li id='" + key + "'>" + val + "</li>" );
+//   });
+ 
+//   $( "<ul/>", {
+//     "class": "my-new-list",
+//     html: items.join( "" )
+//   }).appendTo( "body" );
+// });
+/*
+function load(arr) {
+    var out = "";
+    var i;
+    for(i = 0; i<arr.length; i++) {
+        out += '<a>' + arr[i].title  + 
+        arr[i].note + '</a><br>';
+    }
+    document.getElementById("demo").innerHTML = out;
+}
+*/
+
+<!-- 
+// .then(response => response.json())
+//             .then(json => {
+//                 this.items = json.items
+// 		// this.sortedEvents = this.alphaSort(this.events);
+//             });
+// newsapi.items({
+//   source: 'Herald Pub. Co.', // required 
+//   sortBy: 'top' // optional 
+// }).then(slider => {
+//   console.log(slider);
+// router.get('/', function(req, res, next) {
+// let NewsAPI = require('newsapi');
+//  created() {
+//         fetch('https://chroniclingamerica.loc.gov/search/pages/results/?andtext=thomas&format=json')
+//             .then(response => response.json())
+//             .then(json => {
+//                 this.events = json.events
+// 		this.sortedEvents = this.alphaSort(this.events);
+//             });
+//     },
+
+// for(i=1;i<4779526;i++)
+// {
+// this.render({ title: 'Latest',item:itemsResponse.items,top <! <! --><!-- :topresponses.items,slider:slider.items});}; -->
+</script>
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	
+var url = 'https://newsapi.org/v2/top-headlines?' +
+          'country=us&' +
+          'apiKey=252805a9e20c4735a6cd6448d4b88e7f';
+var req = new Request(url);
+fetch(req)
+    .then(function(response) {
+    	return response.json()
+    }).then(function(jsonResult) {
+        // console.log(response.json());
+        console.log(jsonResult);
+        var text = '';
+        for (var i = 0; i < jsonResult.articles.length; i++) {
+        	text += '<div class="card" onclick=\"this.classList.toggle(\'flipped\')\" ><div class="front">'+jsonResult.articles[i].title+"                  "+jsonResult.articles[i].description+'</div><div class="back"></div></div>';
+        	// text += '<div class="front">'+jsonResult.articles[i].title+'</div>';
+           $('#demoContainer').append(
+				text
+			);
+       };
+    });
+$(document).ready(function(){
+	
+});
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
